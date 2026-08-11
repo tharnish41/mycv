@@ -11,7 +11,7 @@ html {
 
 body {
     min-height: 100vh;
-    background: rgb(5, 10, 0);
+    background: rgb(165, 165, 164);
     color: aliceblue;
     overflow-x: hidden;
 }
@@ -67,6 +67,18 @@ header {
     background: greenyellow;
     color: rgb(5, 10, 0);
     box-shadow: 0 0 15px greenyellow;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-resume {
+    padding: 0.45rem 1.1rem;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    background: transparent;
+    color: greenyellow;
+    border: 2px solid greenyellow;
     text-decoration: none;
     transition: all 0.3s ease;
 }
@@ -327,6 +339,8 @@ main {
     font-size: 1.5rem;
     box-shadow: 0 0 15px greenyellow;
 }
+
+.contact-card h3 { margin-top: 6px; }
 
 .contact-card a {
     color: #eaffea;
