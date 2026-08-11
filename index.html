@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tharnish | BCA Graduate</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="box-lay">
+        <div class="box" style="--k:6;"></div>
+        <div class="box" style="--k:5;"></div>
+        <div class="box" style="--k:4;"></div>
+        <div class="box" style="--k:3;"></div>
+        <div class="box" style="--k:2;"></div>
+        <div class="box" style="--k:1;"></div>
+    </div>
+
+    <header>
+        <h1 class="logo">THARNISH</h1>
+        <nav class="nav-link">
+            <a href="#home" class="home-active">Home</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+        </nav>
+        <a href="mailto:tharnishn41@gmail.com" class="btn">Contact Me</a>
+    </header>
+
+    <main>
+        <!-- HOME -->
+        <section id="home" class="page active">
+            <div class="home-text">
+                <h1 class="home-name">Hi, It's <span>THARNISH</span></h1>
+                <h1 class="home-name">I'm a <span>Python Developer</span></h1>
+                <p>
+                    BCA Graduate with hands-on project experience in Python, MySQL,
+                    and .NET. Passionate about software development, problem solving,
+                    and building practical IT solutions.
+                </p>
+
+                <div class="home-icon">
+                    <a href="mailto:tharnishn41@gmail.com" aria-label="Email">✉</a>
+                    <a href="tel:6374771059" aria-label="Phone">☎</a>
+                </div>
+
+                <a href="#contact" class="btn1">Hire Me</a>
+            </div>
+
+            <div class="home-img">
+                <div class="profile-placeholder"><img src="jack.jpeg" alt=""></div>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills" class="content-page">
+            <div class="section-heading">
+                <p class="section-tag">MY TECHNICAL & PERSONAL SKILLS</p>
+                <h2>My <span>Skills</span></h2>
+                <p>Skills based on my resume and academic project experience.</p>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Technical Skills</h3>
+                    <div class="skill-list">
+                        <span>Python</span>
+                        <span>MySQL</span>
+                        <span>ASP.NET / .NET</span>
+                        <span>C / C++</span>
+                        <span>HTML & CSS</span>
+                        <span>MS Office</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Personal Skills</h3>
+                    <div class="skill-list">
+                        <span>Problem Solving</span>
+                        <span>Team Collaboration</span>
+                        <span>Time Management</span>
+                        <span>Adaptability</span>
+                        <span>Communication</span>
+                    </div>
+                </div>
+
+                <div class="skill-card project-card">
+                    <h3>Project Skills</h3>
+                    <p><strong>Hospital Management System</strong></p>
+                    <p>
+                        Patient registration, doctor scheduling, billing and reports
+                        using Python, MySQL and .NET.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="content-page">
+            <div class="section-heading">
+                <p class="section-tag">ABOUT ME</p>
+                <h2>About <span>Me</span></h2>
+            </div>
+
+            <div class="about-box">
+                <h3>N. Tharnish</h3>
+                <p>
+                    I am a BCA graduate with hands-on academic project experience
+                    in Hospital Management Systems using Python, MySQL and .NET.
+                    I am interested in starting my career in IT and applying my
+                    technical skills to real-world software projects.
+                </p>
+                <p>
+                    I enjoy solving problems, learning new technologies, working
+                    with a team, and improving my programming skills through
+                    coding challenges and technical learning.
+                </p>
+
+                <div class="about-details">
+                    <div><strong>Education:</strong> Bachelor of Computer Applications (BCA)</div>
+                    <div><strong>Languages:</strong> Tamil (Native), English (Proficient)</div>
+                    <div><strong>Interests:</strong> Reading Tech Blogs, Coding Challenges, Cricket</div>
+                    <div><strong>Career Goal:</strong> Entry-level IT / Software Development Role</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="content-page">
+            <div class="section-heading">
+                <p class="section-tag">GET IN TOUCH</p>
+                <h2>Contact <span>Me</span></h2>
+                <p>Feel free to contact me for entry-level IT opportunities.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">✉</div>
+                    <h3>Email</h3>
+                    <a href="mailto:tharnishn41@gmail.com">tharnishn41@gmail.com</a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">☎</div>
+                    <h3>Phone</h3>
+                    <a href="tel:6374771059">6374771059</a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">⌖</div>
+                    <h3>Location</h3>
+                    <p>Sengamangalam, Peravurani, Thanjavur</p>
+                </div>
+            </div>
+
+            <a href="mailto:tharnishn41@gmail.com" class="btn1 contact-button">Send Email</a>
+        </section>
+    </main>
+
+    <script>
+        const navLinks = document.querySelectorAll('.nav-link a');
+
+        function updateActiveLink() {
+            const sections = document.querySelectorAll('section');
+            let current = 'home';
+
+            sections.forEach(section => {
+                const top = section.offsetTop - 150;
+                if (window.scrollY >= top) current = section.id;
+            });
+
+            navLinks.forEach(link => {
+                link.classList.toggle(
+                    'home-active',
+                    link.getAttribute('href') === '#' + current
+                );
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveLink);
+        updateActiveLink();
+    </script>
+</body>
+</html>
