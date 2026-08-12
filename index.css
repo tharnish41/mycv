@@ -182,6 +182,7 @@ main {
     border-radius: 50%;
     display: grid;
     place-items: center;
+    overflow: hidden;
     background: #0d1609;
     border: 2px solid greenyellow;
     color: greenyellow;
@@ -197,6 +198,7 @@ main {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     border-radius: 50%;
     display: block;
 }
